@@ -1,0 +1,69 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  ACR_NAME: "chidiezejaugwuacr25" 
+  BACKEND_IMAGE: "backend-app"
+  AKS_CLUSTER_NAME: "demo-aks-cluster" 
+  AKS_RESOURCE_GROUP: "Chidi"          
+  KUBERNETES_NAMESPACE: "dev"     
+  AZURE_SUBSCRIPTION: "demo-service-conn" 
+  KUBECTL_VERSION: "1.23.0"            
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildAndPushImage
+    steps:
+    # Log in to Azure Container Registry
+    - task: AzureCLI@2
+      displayName: Log in to ACR
+      inputs:
+        azureSubscription: $(AZURE_SUBSCRIPTION)
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az acr login --name $(ACR_NAME)
+
+    # Build and Push the Backend Docker Image
+    - task: Docker@2
+      displayName: Build and Push Backend Docker Image
+      inputs:
+        command: 'buildAndPush'
+        repository: $(ACR_NAME)/$(BACKEND_IMAGE)
+        dockerfile: 'spring-boot-react-app/backend/Dockerfile'
+        tags: |
+          latest
+
+- stage: Deploy
+  dependsOn: Build
+  jobs:
+  - job: DeployToAKS
+    steps:
+    # Install kubectl
+    - task: Kubernetes@1
+      displayName: Install kubectl
+      inputs:
+        kubectlVersion: $(KUBECTL_VERSION)
+
+    # Deploy to AKS
+    - task: AzureCLI@2
+      displayName: Deploy to AKS
+      inputs:
+        azureSubscription: $(AZURE_SUBSCRIPTION)
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          # Get AKS credentials
+          az aks get-credentials --resource-group $(AKS_RESOURCE_GROUP) --name $(AKS_CLUSTER_NAME)
+
+          # Apply Kubernetes deployment manifest
+          kubectl apply -f kubernetes/backend-deploy-dev.yaml
+
+          # Verify deployment
+          kubectl rollout status deployment/backend-app -n $(KUBERNETES_NAMESPACE)

@@ -1,0 +1,60 @@
+name: Infrastructure-Deployment-$(Build.SourceBranchName)-$(Date:yyyyMMdd)
+
+variables:
+- group: bootcamp-variables
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages: 
+- stage: Terraform_build
+  jobs:
+  - job: InfraDeploy
+    steps:
+    - task: TerraformInstaller@2
+      displayName: install terraform
+      inputs:
+        terraformVersion: '1.9.8'
+
+    - task: TerraformCLI@2
+      displayName: 'Initialization'
+      inputs:
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        backendType: 'azurerm'
+        backendServiceArm: $(SVC_CONNECTION)
+        backendAzureRmResourceGroupName: '$(TFSTATE_RG)'
+        backendAzureRmStorageAccountName: '$(TFSTATE_SA)'
+        backendAzureRmContainerName: '$(TFSTATE_CONTAINER)'
+        backendAzureRmKey: '$(TFSTATE_KEY)'
+        allowTelemetryCollection: true
+        commandOptions: '-upgrade'
+
+    - task: TerraformCLI@2
+      displayName: 'Execute Plan'
+      inputs:
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        environmentServiceName: $(SVC_CONNECTION)
+        allowTelemetryCollection: true
+        publishPlanResults: 'output'
+        commandOptions: '-lock=false -input=false -out=output.tfplan'
+
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish Terraform Plan as Artifact'
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/Infrastructure/output.tfplan'
+        artifact: 'tfplan'
+
+    - task: TerraformCLI@2
+      displayName: 'Deploy'
+      inputs:
+        command: 'apply'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        environmentServiceName: $(SVC_CONNECTION)
+        commandOptions: '-input=false -auto-approve output.tfplan'
+        allowTelemetryCollection: true
+

@@ -1,0 +1,53 @@
+# Namespace for Dev Environment
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+
+---
+# Frontend Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: dev
+  labels:
+    app: frontend
+    environment: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+      environment: dev
+  template:
+    metadata:
+      labels:
+        app: frontend
+        environment: dev
+    spec:
+      containers:
+        - name: frontend
+          image: chidiezejaugwuacr25.azurecr.io/frontend-app:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_API_URL
+              value: "http://backend-service.dev.svc.cluster.local"
+
+---
+# Frontend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: dev
+spec:
+  selector:
+    app: frontend
+    environment: dev
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

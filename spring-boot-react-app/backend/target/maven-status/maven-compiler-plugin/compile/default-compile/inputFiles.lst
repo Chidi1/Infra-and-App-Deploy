@@ -1,0 +1,12 @@
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/SpringDataJpaUserDetailsService.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/WebSocketConfiguration.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/HomeController.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/SecurityConfiguration.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/Employee.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/EmployeeRepository.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/DatabaseLoader.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/SpringDataRestEventHandler.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/ManagerRepository.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/EventHandler.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/ReactAndSpringDataRestApplication.java
+/Users/chidiebere/Downloads/microservices-task-main/backend/src/main/java/com/contoso/payroll/Manager.java

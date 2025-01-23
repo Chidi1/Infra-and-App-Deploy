@@ -1,0 +1,6 @@
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.csproj.AssemblyReference.cache
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.AssemblyInfoInputs.cache
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.AssemblyInfo.cs
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.csproj.CoreCompileInputs.cache
+C:\Users\tochukwuonyeamah\cloud-assignment\aspnet-core-dotnet-core\obj\Debug\netcoreapp2.2\aspnet-core-dotnet-core.sourcelink.json

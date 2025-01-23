@@ -1,0 +1,56 @@
+# Namespace for Dev Environment
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+
+---
+# Backend Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: dev
+  labels:
+    app: backend
+    environment: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+      environment: dev
+  template:
+    metadata:
+      labels:
+        app: backend
+        environment: dev
+    spec:
+      containers:
+        - name: backend
+          image: chidiezejaugwuacr25.azurecr.io/backend-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_CONNECTION_STRING
+              value: "mysql://chidi@chididemo-db.mysql.database.azure.com:3306/{chididemo-db}?useSSL=true"
+            - name: DB_PASSWORD
+              value: "$(DB_PASSWORD)" 
+
+
+---
+# Backend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: dev
+spec:
+  selector:
+    app: backend
+    environment: dev
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP

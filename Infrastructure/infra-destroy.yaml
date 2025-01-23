@@ -1,0 +1,52 @@
+name: Infrastructure-Deployment-$(Build.SourceBranchName)-$(Date:yyyyMMdd)
+
+variables:
+- group: bootcamp-variables
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages: 
+- stage: Terraform_Clean_and_Destroy
+  jobs:
+  - job: Clean_And_Destroy
+    displayName: 'Clean and Destroy Terraform Resources'
+    steps:
+    - task: TerraformInstaller@2
+      displayName: Install Terraform
+      inputs:
+        terraformVersion: '1.9.8'
+
+    - task: TerraformCLI@2
+      displayName: 'Initialization'
+      inputs:
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        backendType: 'azurerm'
+        backendServiceArm: $(SVC_CONNECTION)
+        backendAzureRmResourceGroupName: '$(TFSTATE_RG)'
+        backendAzureRmStorageAccountName: '$(TFSTATE_SA)'
+        backendAzureRmContainerName: '$(TFSTATE_CONTAINER)'
+        backendAzureRmKey: '$(TFSTATE_KEY)'
+        allowTelemetryCollection: true
+        commandOptions: '-upgrade'
+
+    - task: TerraformCLI@2
+      displayName: 'Clean Up Workspace'
+      inputs:
+        command: 'clean'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        environmentServiceName: $(SVC_CONNECTION)
+        allowTelemetryCollection: true
+
+    - task: TerraformCLI@2
+      displayName: 'Destroy Resources'
+      inputs:
+        command: 'destroy'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Infrastructure/'
+        environmentServiceName: $(SVC_CONNECTION)
+        commandOptions: '-input=false -auto-approve'
+        allowTelemetryCollection: true

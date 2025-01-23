@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-mvc-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dotnet-mvc-app
+  template:
+    metadata:
+      labels:
+        app: dotnet-mvc-app
+    spec:
+      containers:
+        - name: dotnet-mvc-app
+          image: chidiezejaugwuacr25.azurecr.io/dotnet-mvc-app:$(Build.BuildId)
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-mvc-app
+spec:
+  selector:
+    app: dotnet-mvc-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

@@ -1,0 +1,87 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  acrName: 'chidiezejaugwuacr25.azurecr.io'
+  imageName: 'dotnet-mvc-app'
+  dockerfilePath: 'dotnet/aspnet-core-dotnet-core/Dockerfile'
+  buildContext: '.'
+  buildConfiguration: 'Release'
+  aksClusterName: 'demo-aks-cluster'
+  aksResourceGroup: 'Chidi'
+  kubernetesNamespace: 'default'
+  kubectlVersion: '1.23.0'
+  azureSubscription: 'demo-service-conn'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildAndPushImage
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '3.1'
+
+    # Restore the .NET dependencies
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+
+    # Build the .NET application
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+
+    # Run tests
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'test'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
+
+    # Publish the app
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/publish'
+        zipAfterPublish: true
+
+    # Build and push the Docker image
+    - task: Docker@2
+      inputs:
+        containerRegistry: $(acrName)
+        repository: $(imageName)
+        command: 'buildAndPush'
+        Dockerfile: $(dockerfilePath)
+        buildContext: $(buildContext)
+        tags: |
+          $(Build.BuildId)
+        arguments: '--build-arg PublishDir=$(Build.ArtifactStagingDirectory)/publish'
+
+- stage: Deploy
+  dependsOn: Build
+  jobs:
+  - job: DeployToAKS
+    steps:
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          # Get AKS credentials
+          az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksClusterName)
+
+          # Apply the Kubernetes deployment and service
+          kubectl apply -f kubernetes/dotnet-app-deployment.yaml
+        displayName: 'Deploy to AKS'

@@ -1,0 +1,130 @@
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.csproj.AssemblyReference.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.AssemblyInfoInputs.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.AssemblyInfo.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.csproj.CoreCompileInputs.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.sourcelink.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.TagHelpers.input.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.TagHelpers.output.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.pdb
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/appsettings.Development.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/appsettings.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/bundleconfig.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.exe
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.deps.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.runtimeconfig.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.runtimeconfig.dev.json
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.pdb
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.pdb
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorAssemblyInfo.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorAssemblyInfo.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorCoreGenerate.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/About.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Contact.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Privacy.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_CookieConsentPartial.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_Layout.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_ValidationScriptsPartial.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/_ViewImports.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/_ViewStart.cshtml.g.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorTargetAssemblyInfo.cache
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorTargetAssemblyInfo.cs
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.pdb
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-c.7779233E.Up2Date
+C:/Users/tochukwuonyeamah/cloud-assignment/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.genruntimeconfig.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/bundleconfig.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.deps.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.runtimeconfig.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.runtimeconfig.dev.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.pdb
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.pdb
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.AssemblyInfoInputs.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.AssemblyInfo.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.csproj.CoreCompileInputs.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.MvcApplicationPartsAssemblyInfo.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorAssemblyInfo.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorAssemblyInfo.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.TagHelpers.input.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.TagHelpers.output.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorCoreGenerate.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/About.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Contact.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Privacy.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_CookieConsentPartial.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_Layout.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/_ViewImports.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/Razor/Pages/_ViewStart.cshtml.g.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorTargetAssemblyInfo.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.RazorTargetAssemblyInfo.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.Views.pdb
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.dll
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.pdb
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.genruntimeconfig.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.csprojAssemblyReference.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp3.1/aspnet-core-dotnet-core.csproj.CopyComplete

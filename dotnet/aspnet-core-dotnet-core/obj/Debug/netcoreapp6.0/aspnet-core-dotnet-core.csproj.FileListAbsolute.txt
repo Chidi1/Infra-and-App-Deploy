@@ -1,0 +1,9 @@
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.csproj.AssemblyReference.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.AssemblyInfoInputs.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.AssemblyInfo.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.csproj.CoreCompileInputs.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.MvcApplicationPartsAssemblyInfo.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.RazorAssemblyInfo.cache
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.RazorAssemblyInfo.cs
+/Users/chidiebere/Documents/Capgemini tasks/Infra-and-App-Deploy/dotnet/aspnet-core-dotnet-core/obj/Debug/netcoreapp6.0/aspnet-core-dotnet-core.sourcelink.json
