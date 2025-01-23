@@ -105,7 +105,7 @@ resource "azurerm_resource_group" "new-rg" {
    - Review and approve if approval checks are configured on your envrionment
 
 4. **To Cleanup and Destroy the Deployed Infrastructure**:
-   Follow the same steps in 3 above but for the deployment file, use infra-destroy.yaml 
+   Follow the same steps in 3 above but for the deployment file, use `infra-destroy.yaml` 
 
 
 ## Dotnet Application
