@@ -14,19 +14,33 @@ spec:
     spec:
       containers:
         - name: dotnet-mvc-app
-          image: chidiezejaugwuacr25.azurecr.io/dotnet-mvc-app:$(Build.BuildId)
-          ports:
-            - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: dotnet-mvc-app
-spec:
-  selector:
-    app: dotnet-mvc-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer
+          image: "chidiajiboeze1.azurecr.io/dotnet-mvc-app:v1.0.0"
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsUser: 1000
+            runAsNonRoot: true
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - dotnet-mvc-app
+              topologyKey: "kubernetes.io/hostname"
+
+
+
+
+
+
+
+
