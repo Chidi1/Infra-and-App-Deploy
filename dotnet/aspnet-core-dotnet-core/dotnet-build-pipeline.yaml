@@ -1,22 +1,33 @@
+parameters:
+- name: environment
+  displayName: 'Select Environment'
+  type: string
+  default: 'dev'
+  values:
+    - dev
+    - uat
+    - prod
+
 trigger:
   branches:
     include:
-      - main
+      - 
 
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  acrName: 'chidiezejaugwuacr25.azurecr.io'
+  acrServiceConn: 'acr-service-conn'
   imageName: 'dotnet-mvc-app'
   dockerfilePath: 'dotnet/aspnet-core-dotnet-core/Dockerfile'
-  buildContext: '.'
+  buildContext: '$(Build.SourcesDirectory)/dotnet'
   buildConfiguration: 'Release'
   aksClusterName: 'demo-aks-cluster'
-  aksResourceGroup: 'Chidi'
+  aksResourceGroup: 'chidiebere-deployment'
   kubernetesNamespace: 'default'
   kubectlVersion: '1.23.0'
-  azureSubscription: 'demo-service-conn'
+  azureSubscription: 'chidi-to-azure-sponsorship'
+  dotnet_folder: '$(System.DefaultWorkingDirectory)/dotnet/aspnet-core-dotnet-core/'
 
 stages:
 - stage: Build
@@ -26,47 +37,46 @@ stages:
     - task: UseDotNet@2
       inputs:
         packageType: 'sdk'
-        version: '3.1'
+        version: '3.1.x'
 
-    # Restore the .NET dependencies
     - task: DotNetCoreCLI@2
+      displayName: 'Restore .NET dependencies'
       inputs:
         command: 'restore'
         projects: '**/*.csproj'
 
-    # Build the .NET application
     - task: DotNetCoreCLI@2
+      displayName: 'Build .NET application'
       inputs:
         command: 'build'
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration)'
 
-    # Run tests
     - task: DotNetCoreCLI@2
+      displayName: 'Run .NET tests'
       inputs:
         command: 'test'
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --no-restore'
 
-    # Publish the app
     - task: DotNetCoreCLI@2
+      displayName: 'Publish .NET application'
       inputs:
         command: 'publish'
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/publish'
         zipAfterPublish: true
 
-    # Build and push the Docker image
     - task: Docker@2
+      displayName: 'Build and Push Docker Image'
       inputs:
-        containerRegistry: $(acrName)
+        containerRegistry: $(acrServiceConn)
         repository: $(imageName)
         command: 'buildAndPush'
         Dockerfile: $(dockerfilePath)
-        buildContext: $(buildContext)
+        buildContext: '$(buildContext)'
         tags: |
-          $(Build.BuildId)
-        arguments: '--build-arg PublishDir=$(Build.ArtifactStagingDirectory)/publish'
+          v1.0.0
 
 - stage: Deploy
   dependsOn: Build
@@ -74,6 +84,7 @@ stages:
   - job: DeployToAKS
     steps:
     - task: AzureCLI@2
+      displayName: 'ACR Image Pull, Deploy App and Grafana to AKS'
       inputs:
         azureSubscription: $(azureSubscription)
         scriptType: 'bash'
@@ -83,5 +94,18 @@ stages:
           az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksClusterName)
 
           # Apply the Kubernetes deployment and service
-          kubectl apply -f kubernetes/dotnet-app-deployment.yaml
-        displayName: 'Deploy to AKS'
+          kubectl apply -f dotnet/aspnet-core-dotnet-core/dotnet-app-deployment.yaml
+          az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksClusterName)
+          helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+          helm repo update
+          kubectl create ns prometheus
+          helm install prometheus prometheus-community/kube-prometheus-stack -n prometheus
+          kubectl get all -n prometheus
+    - script: |
+          docker run -v $(dotnet_folder):/yaml stackrox/kube-linter lint /yaml
+      displayName: Run Static Code analysis for Kubernetes dotnet manifest files
+      continueOnError: true
+      
+
+
+
