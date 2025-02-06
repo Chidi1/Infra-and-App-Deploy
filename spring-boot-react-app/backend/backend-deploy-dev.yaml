@@ -1,56 +1,77 @@
-# Namespace for Dev Environment
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: dev
+parameters:
+- name: environment
+  displayName: 'Select Environment'
+  type: string
+  default: 'dev'
+  values:
+    - dev
+    - uat
+    - prod
+    
+trigger:
+  branches:
+    include:
+      - 
 
----
-# Backend Deployment
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backend-deployment
-  namespace: dev
-  labels:
-    app: backend
-    environment: dev
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: backend
-      environment: dev
-  template:
-    metadata:
-      labels:
-        app: backend
-        environment: dev
-    spec:
-      containers:
-        - name: backend
-          image: chidiezejaugwuacr25.azurecr.io/backend-app:latest
-          ports:
-            - containerPort: 8080
-          env:
-            - name: DB_CONNECTION_STRING
-              value: "mysql://chidi@chididemo-db.mysql.database.azure.com:3306/{chididemo-db}?useSSL=true"
-            - name: DB_PASSWORD
-              value: "$(DB_PASSWORD)" 
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  acrServiceConn: 'acr-service-conn'
+  imageName: 'java-backend-app'
+  dockerfilePath: 'spring-boot-react-app/backend/Dockerfile'
+  buildContext: '$(Build.SourcesDirectory)/spring-boot-react-app/backend/'
+  buildConfiguration: 'Release'
+  aksClusterName: 'demo-aks-cluster'
+  aksResourceGroup: 'chidiebere-deployment'
+  kubernetesNamespace: 'default'
+  kubectlVersion: '1.23.0'
+  azureSubscription: 'chidi-to-azure-sponsorship'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildAndPushImage
+    steps:
+    # Log in to Azure Container Registry
+    - task: AzureCLI@2
+      displayName: Log in to ACR
+      inputs:
+        azureSubscription: $(azureSubscription)
+        containerRegistry: $(acrServiceConn)
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az acr login --name chidiajiboeze1
 
 
----
-# Backend Service
-apiVersion: v1
-kind: Service
-metadata:
-  name: backend-service
-  namespace: dev
-spec:
-  selector:
-    app: backend
-    environment: dev
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
-  type: ClusterIP
+    # Build and push the Docker image
+    - task: Docker@2
+      displayName: 'Build and Push Docker Image'
+      inputs:
+        containerRegistry: $(acrServiceConn)
+        repository: $(imageName)
+        command: 'buildAndPush'
+        Dockerfile: $(dockerfilePath)
+        buildContext: '$(buildContext)'
+        tags: |
+          latest
+
+- stage: Deploy
+  dependsOn: Build
+  jobs:
+  - job: DeployToAKS
+    steps:
+    - task: AzureCLI@2
+      displayName: 'ACR Image Pull and Deploy to AKS'
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          # Get AKS credentials
+          az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksClusterName)
+
+          # Apply the Kubernetes deployment and service
+          kubectl apply -f spring-boot-react-app/backend/backend-deploy-dev.yaml
+        displayName: 'Deploy to AKS'
