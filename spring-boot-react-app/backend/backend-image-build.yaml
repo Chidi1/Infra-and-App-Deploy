@@ -1,19 +1,32 @@
+parameters:
+- name: environment
+  displayName: 'Select Environment'
+  type: string
+  default: 'dev'
+  values:
+    - dev
+    - uat
+    - prod
+    
 trigger:
   branches:
     include:
-      - main
+      - 
 
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  ACR_NAME: "chidiezejaugwuacr25" 
-  BACKEND_IMAGE: "backend-app"
-  AKS_CLUSTER_NAME: "demo-aks-cluster" 
-  AKS_RESOURCE_GROUP: "Chidi"          
-  KUBERNETES_NAMESPACE: "dev"     
-  AZURE_SUBSCRIPTION: "demo-service-conn" 
-  KUBECTL_VERSION: "1.23.0"            
+  acrServiceConn: 'acr-service-conn'
+  imageName: 'java-backend-app'
+  dockerfilePath: 'spring-boot-react-app/backend/Dockerfile'
+  buildContext: '$(Build.SourcesDirectory)/spring-boot-react-app/backend/'
+  buildConfiguration: 'Release'
+  aksClusterName: 'demo-aks-cluster'
+  aksResourceGroup: 'chidiebere-deployment'
+  kubernetesNamespace: 'default'
+  kubectlVersion: '1.23.0'
+  azureSubscription: 'chidi-to-azure-sponsorship'
 
 stages:
 - stage: Build
@@ -24,19 +37,23 @@ stages:
     - task: AzureCLI@2
       displayName: Log in to ACR
       inputs:
-        azureSubscription: $(AZURE_SUBSCRIPTION)
+        azureSubscription: $(azureSubscription)
+        containerRegistry: $(acrServiceConn)
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az acr login --name $(ACR_NAME)
+          az acr login --name chidiajiboeze1
 
-    # Build and Push the Backend Docker Image
+
+    # Build and push the Docker image
     - task: Docker@2
-      displayName: Build and Push Backend Docker Image
+      displayName: 'Build and Push Docker Image'
       inputs:
+        containerRegistry: $(acrServiceConn)
+        repository: $(imageName)
         command: 'buildAndPush'
-        repository: $(ACR_NAME)/$(BACKEND_IMAGE)
-        dockerfile: 'spring-boot-react-app/backend/Dockerfile'
+        Dockerfile: $(dockerfilePath)
+        buildContext: '$(buildContext)'
         tags: |
           latest
 
@@ -45,25 +62,16 @@ stages:
   jobs:
   - job: DeployToAKS
     steps:
-    # Install kubectl
-    - task: Kubernetes@1
-      displayName: Install kubectl
-      inputs:
-        kubectlVersion: $(KUBECTL_VERSION)
-
-    # Deploy to AKS
     - task: AzureCLI@2
-      displayName: Deploy to AKS
+      displayName: 'ACR Image Pull and Deploy to AKS'
       inputs:
-        azureSubscription: $(AZURE_SUBSCRIPTION)
+        azureSubscription: $(azureSubscription)
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
           # Get AKS credentials
-          az aks get-credentials --resource-group $(AKS_RESOURCE_GROUP) --name $(AKS_CLUSTER_NAME)
+          az aks get-credentials --resource-group $(aksResourceGroup) --name $(aksClusterName)
 
-          # Apply Kubernetes deployment manifest
-          kubectl apply -f kubernetes/backend-deploy-dev.yaml
-
-          # Verify deployment
-          kubectl rollout status deployment/backend-app -n $(KUBERNETES_NAMESPACE)
+          # Apply the Kubernetes deployment and service
+          kubectl apply -f spring-boot-react-app/backend/backend-deploy-dev.yaml
+        displayName: 'Deploy to AKS'
